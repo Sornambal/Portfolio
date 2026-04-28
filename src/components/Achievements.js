@@ -1,42 +1,40 @@
-import { Trophy, Medal, Award, Star } from 'lucide-react';
-
 export default function Achievements() {
   const achievements = [
     {
       title: "Top ~3% Global Rank",
       subtitle: "Kaggle Spaceship Titanic Competition",
       desc: "Ranked 72 out of 2,584 participants globally using CatBoost and advanced feature engineering.",
-      icon: <Trophy size={40} className="text-gradient" />
+      icon: "🚀"
     },
     {
       title: "High Performance in Kaggle",
       subtitle: "Predicting Loan Payback",
       desc: "Achieved 0.92299 ROC-AUC in Kaggle Playground Series.",
-      icon: <Trophy size={40} className="text-gradient" />
+      icon: "📊"
     },
     {
       title: "Academic Topper (2x)",
       subtitle: "B.Tech Information Technology",
       desc: "Achieved a CGPA of 9.29 / 10 at KGISL Institute of Technology.",
-      icon: <Star size={40} className="text-gradient" />
+      icon: "🎓"
     },
     {
       title: "KITE Achiever Award (2x)",
       subtitle: "KGiSL Institute of Technology",
       desc: "Recognized for outstanding contribution to the Pointer Camp and C Mini Projects.",
-      icon: <Medal size={40} className="text-gradient" />
+      icon: "🏆"
     },
     {
       title: "Hackathon Successes",
       subtitle: "Multiple National Hackathons",
       desc: "Selected 2x for SIH Internal Hackathon, participated in Trixathon 2K25.",
-      icon: <Award size={40} className="text-gradient" />
+      icon: "💡"
     },
     {
       title: "CIT Hackathon 2025",
       subtitle: "Bronze Medal",
       desc: "Top 24 out of 220+ teams for 'MedCycle', an AI-powered medicine redistribution app.",
-      icon: <Award size={40} className="text-gradient" />
+      icon: "🥉"
     }
   ];
 
@@ -55,14 +53,17 @@ export default function Achievements() {
         {achievements.map((item, idx) => (
           <div key={idx} className="glass-card" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
             <div style={{
-              width: '80px',
-              height: '80px',
+              width: '85px',
+              height: '85px',
               borderRadius: '50%',
-              background: 'rgba(99, 102, 241, 0.1)',
+              background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(192, 132, 252, 0.2))',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              marginBottom: '1rem'
+              marginBottom: '1rem',
+              fontSize: '2.5rem',
+              boxShadow: '0 0 30px rgba(99, 102, 241, 0.3), inset 0 0 15px rgba(192, 132, 252, 0.2)',
+              border: '2px solid rgba(255, 255, 255, 0.1)'
             }}>
               {item.icon}
             </div>

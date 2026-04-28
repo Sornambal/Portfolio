@@ -11,8 +11,9 @@ import Memories from "@/components/Memories";
 
 export default function Home() {
   return (
-    <main>
+    <main className="site-main">
       <div className="bg-gradient"></div>
+      <div className="bg-mesh"></div>
       <Hero />
       <About />
       <Skills />

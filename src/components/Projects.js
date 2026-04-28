@@ -1,4 +1,3 @@
-import { ExternalLink } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
@@ -199,7 +198,7 @@ export default function Projects() {
                 )}
                 {project.demo !== '#' && (
                   <a href={project.demo} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: '#a3a3a3' }}>
-                    <ExternalLink size={18} /> Live Demo
+                     Live Demo
                   </a>
                 )}
               </div>
@@ -207,30 +206,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        .project-img-wrapper:hover .project-overlay {
-          opacity: 1 !important;
-        }
-        .project-img-wrapper:hover img {
-          transform: scale(1.05);
-        }
-        .view-btn {
-          padding: 0.75rem 1.75rem; 
-          background: rgba(56, 189, 248, 0.15); 
-          border: 1px solid rgba(56, 189, 248, 0.4);
-          border-radius: 9999px; 
-          color: #38bdf8; 
-          font-weight: 600; 
-          transition: all 0.3s ease;
-          text-decoration: none;
-        }
-        .view-btn:hover {
-          background: rgba(56, 189, 248, 0.3); 
-          color: #fff;
-          box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
-        }
-      `}</style>
     </section>
   );
 }

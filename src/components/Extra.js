@@ -1,4 +1,3 @@
-import { Code, Flame, Rocket } from 'lucide-react';
 
 export default function Extra() {
   return (
@@ -8,7 +7,7 @@ export default function Extra() {
         {/* Working On */}
         <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem' }}>
-            <Rocket className="text-gradient" size={28} />
+            
             <h3 style={{ margin: 0 }}>What I'm Currently Working On</h3>
           </div>
           <p style={{ margin: 0, color: '#a3a3a3', lineHeight: '1.8' }}>

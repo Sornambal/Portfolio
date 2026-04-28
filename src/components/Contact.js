@@ -1,5 +1,4 @@
 "use client";
-import { Mail, User, Code, Globe, Send, Terminal } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -16,8 +15,8 @@ export default function Contact() {
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <a href="mailto:sornambalp97@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
-                  <Mail className="text-gradient" size={24} />
+                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src="/file.svg" alt="Email" style={{ width: '24px', height: '24px' }} />
                 </div>
                 <div>
                   <div style={{ fontSize: '0.875rem', color: '#a3a3a3' }}>Email</div>
@@ -26,8 +25,8 @@ export default function Contact() {
               </a>
 
               <a href="https://www.linkedin.com/in/sornambal-p-b789132b8/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
-                  <User className="text-gradient" size={24} />
+                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src="/globe.svg" alt="LinkedIn" style={{ width: '24px', height: '24px' }} />
                 </div>
                 <div>
                   <div style={{ fontSize: '0.875rem', color: '#a3a3a3' }}>LinkedIn</div>
@@ -36,8 +35,8 @@ export default function Contact() {
               </a>
 
               <a href="https://github.com/Sornambal" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
-                  <Code className="text-gradient" size={24} />
+                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src="/window.svg" alt="GitHub" style={{ width: '24px', height: '24px' }} />
                 </div>
                 <div>
                   <div style={{ fontSize: '0.875rem', color: '#a3a3a3' }}>GitHub</div>
@@ -46,8 +45,8 @@ export default function Contact() {
               </a>
 
               <a href="https://www.kaggle.com/sornambalp" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
-                  <Globe className="text-gradient" size={24} />
+                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src="/vercel.svg" alt="Kaggle" style={{ width: '24px', height: '24px' }} />
                 </div>
                 <div>
                   <div style={{ fontSize: '0.875rem', color: '#a3a3a3' }}>Kaggle</div>
@@ -56,8 +55,8 @@ export default function Contact() {
               </a>
 
               <a href="https://leetcode.com/u/Sornambal/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
-                  <Terminal className="text-gradient" size={24} />
+                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src="/next.svg" alt="LeetCode" style={{ width: '24px', height: '24px' }} />
                 </div>
                 <div>
                   <div style={{ fontSize: '0.875rem', color: '#a3a3a3' }}>LeetCode</div>
@@ -66,8 +65,8 @@ export default function Contact() {
               </a>
 
               <a href="https://www.hackerrank.com/profile/sornambalp97" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
-                  <Terminal className="text-gradient" size={24} />
+                <div style={{ padding: '0.75rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src="/achievements/achieve_star.png" alt="HackerRank" style={{ width: '24px', height: '24px', borderRadius: '50%' }} />
                 </div>
                 <div>
                   <div style={{ fontSize: '0.875rem', color: '#a3a3a3' }}>HackerRank</div>
@@ -122,7 +121,7 @@ export default function Contact() {
                 }}></textarea>
               </div>
               <button type="submit" className="btn btn-primary" style={{ marginTop: '1rem' }}>
-                Send Message <Send size={18} />
+                Send Message 
               </button>
             </form>
           </div>

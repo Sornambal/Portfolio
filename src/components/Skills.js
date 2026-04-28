@@ -1,107 +1,82 @@
-import { Globe, Server, Database, Cloud, Brain, Code2, Users, Lightbulb } from 'lucide-react';
-
 export default function Skills() {
-  const skillCards = [
+  const skillCategories = [
     {
-      title: "Python & AI Models",
-      level: "Advanced",
-      icon: <Brain size={32} color="#38bdf8" />
+      title: "🧠 AI / Machine Learning",
+      skills: [
+        "Machine Learning", "Deep Learning", "NLP",
+        "Feature Engineering", "Model Evaluation", "Classification", "Regression",
+        "Scikit-learn", "TensorFlow", "PyTorch", "Pandas", "NumPy"
+      ]
     },
     {
-      title: "Generative AI & LLMs",
-      level: "Advanced",
-      icon: <Code2 size={32} color="#38bdf8" />
+      title: "🤖 Generative AI & Agentic Systems",
+      skills: [
+        "LLM Applications (Groq, FLAN-T5)", "Retrieval-Augmented Generation (RAG)",
+        "LangGraph", "Multi-Agent Orchestration", "Prompt Engineering", 
+        "LLM Optimization", "Transformers"
+      ]
     },
     {
-      title: "Data Science Tools",
-      level: "Advanced",
-      icon: <Database size={32} color="#38bdf8" />
+      title: "🌐 Backend & APIs",
+      skills: [
+        "Python", "Flask", "FastAPI",
+        "REST APIs", "API Integration",
+        "Automation Pipelines", "Scheduling Systems"
+      ]
     },
     {
-      title: "Backend Development",
-      level: "Intermediate",
-      icon: <Server size={32} color="#38bdf8" />
+      title: "💻 Frontend & Full Stack",
+      skills: [
+        "React.js", "Next.js",
+        "HTML", "CSS", "JavaScript",
+        "Gradio", "Streamlit"
+      ]
     },
     {
-      title: "Web Technologies",
-      level: "Intermediate",
-      icon: <Globe size={32} color="#38bdf8" />
+      title: "🗄️ Databases & Vector Stores",
+      skills: [
+        "MongoDB", "MySQL",
+        "FAISS (Vector Search)"
+      ]
     },
     {
-      title: "Cloud & Deployment",
-      level: "Intermediate",
-      icon: <Cloud size={32} color="#38bdf8" />
-    },
-    {
-      title: "Problem Solving",
-      level: "Soft Skill",
-      icon: <Lightbulb size={32} color="#818cf8" />
-    },
-    {
-      title: "Team Collaboration",
-      level: "Soft Skill",
-      icon: <Users size={32} color="#818cf8" />
+      title: "☁️ Deployment & Tools",
+      skills: [
+        "Hugging Face Spaces", "Render", "Netlify",
+        "Git", "GitHub", "Jupyter Notebook",
+        "Kaggle", "Databricks"
+      ]
     }
   ];
 
   return (
     <section id="skills" className="container" style={{ paddingTop: '6rem' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '4rem' }}>
-        <span className="text-gradient">Technical Expertise</span>
+      <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>
+        <span className="text-gradient">Technical Arsenal</span>
       </h2>
+      <p style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '600px', margin: '0 auto 4rem auto' }}>
+        A comprehensive overview of my technical proficiencies and specialized tools across the AI and software development spectrum.
+      </p>
       
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
         gap: '2rem',
         marginBottom: '4rem'
       }}>
-        {skillCards.map((card, idx) => (
-          <div key={idx} className="glass-card" style={{ 
-            display: 'flex', 
-            flexDirection: 'column', 
-            alignItems: 'center', 
-            justifyContent: 'center',
-            padding: '2.5rem 1.5rem',
-            textAlign: 'center',
-            gap: '1.25rem',
-            transition: 'all 0.3s ease'
-          }}
-          onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-          >
-            {/* Circular Icon Container */}
-            <div style={{
-              width: '80px',
-              height: '80px',
-              borderRadius: '50%',
-              background: 'rgba(56, 189, 248, 0.05)',
-              border: '1px solid rgba(56, 189, 248, 0.2)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: 'inset 0 0 20px rgba(56, 189, 248, 0.1), 0 0 15px rgba(56, 189, 248, 0.1)',
-              marginBottom: '0.5rem'
-            }}>
-              {card.icon}
-            </div>
-            
-            <h3 style={{ margin: 0, fontSize: '1.2rem', color: '#e2e8f0', fontWeight: 600 }}>
-              {card.title}
+        {skillCategories.map((category, idx) => (
+          <div key={idx} className="glass-card" style={{ padding: '2rem' }}>
+            <h3 style={{ margin: '0 0 1.5rem 0', fontSize: '1.25rem', color: '#f8fafc' }}>
+              {category.title}
             </h3>
             
-            {/* Proficiency Badge */}
-            <span style={{
-              padding: '0.25rem 1rem',
-              borderRadius: '9999px',
-              fontSize: '0.75rem',
-              fontWeight: 500,
-              background: card.level === 'Soft Skill' ? 'rgba(129, 140, 248, 0.1)' : 'rgba(56, 189, 248, 0.1)',
-              color: card.level === 'Soft Skill' ? '#818cf8' : '#38bdf8',
-              border: `1px solid ${card.level === 'Soft Skill' ? 'rgba(129, 140, 248, 0.3)' : 'rgba(56, 189, 248, 0.3)'}`
-            }}>
-              {card.level}
-            </span>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+              {category.skills.map((skill, sIdx) => (
+                <span key={sIdx} className="skill-badge">
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
         ))}
       </div>

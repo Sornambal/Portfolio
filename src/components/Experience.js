@@ -1,4 +1,3 @@
-import { Briefcase } from 'lucide-react';
 
 export default function Experience() {
   const experiences = [
@@ -8,9 +7,10 @@ export default function Experience() {
       duration: "Jan 2026 – Present",
       type: "Remote",
       details: [
-        "Designed and implemented an end-to-end multi-agent AI system, defining agent roles, inputs/outputs, decision logic, and interaction flow for scalable agentic workflows.",
-        "Architected agent orchestration workflows, including agent flow diagrams, prompt templates, and model selection strategies optimized for quality, cost, and performance trade-offs.",
-        "Contributed to planning, testing, and deployment strategy for AI-driven systems, supporting the full lifecycle from requirements analysis to end-to-end validation."
+        "Designed and implemented a multi-agent AI system with centralized orchestration and brand-aware sub-agents",
+        "Automated the end-to-end content lifecycle (ideation → creation → scheduling → publishing) using LLM-based workflows",
+        "Integrated AI agents with APIs, schedulers, and dashboards to enable scalable, real-time automation",
+        "Worked on system design, prompt engineering, and agent workflows in a fast-paced startup environment"
       ]
     },
     {
@@ -91,7 +91,7 @@ export default function Experience() {
                   <div>
                     <h3 style={{ margin: 0, fontSize: '1.4rem', color: 'var(--foreground)' }}>{exp.role}</h3>
                     <div style={{ fontSize: '1.1rem', color: 'var(--primary)', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.25rem' }}>
-                      <Briefcase size={16} /> {exp.company}
+                       {exp.company}
                     </div>
                   </div>
                   <div style={{ textAlign: 'right' }}>

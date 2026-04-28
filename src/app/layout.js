@@ -1,9 +1,10 @@
-import { Inter, Outfit } from "next/font/google";
+import { Manrope, Sora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import MouseGlow from "@/components/MouseGlow";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-body" });
+const sora = Sora({ subsets: ["latin"], variable: "--font-display" });
 
 export const metadata = {
   title: "Sornambal P | AI & Machine Learning Engineer",
@@ -13,7 +14,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${outfit.variable}`}>
+      <body className={`${manrope.variable} ${sora.variable}`}>
+        <MouseGlow />
         <Navbar />
         {children}
       </body>

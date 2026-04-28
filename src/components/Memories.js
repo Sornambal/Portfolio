@@ -1,5 +1,4 @@
 "use client";
-import { User, ExternalLink, X } from 'lucide-react';
 import { useState } from 'react';
 export default function Memories() {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -71,10 +70,10 @@ export default function Memories() {
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <User color="#0a66c2" size={24} />
+                
                 <span style={{ fontSize: '0.85rem', color: '#a3a3a3' }}>{post.date}</span>
               </div>
-              <ExternalLink size={18} color="#a3a3a3" />
+              
             </div>
             
             <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: 'var(--foreground)' }}>
@@ -156,7 +155,7 @@ export default function Memories() {
               cursor: 'pointer'
             }}
           >
-            <X size={32} />
+            
           </button>
           <img 
             src={selectedImg} 
