@@ -1,20 +1,29 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { motion, useMotionValue, useSpring, useMotionTemplate } from 'framer-motion';
 
 export default function MouseGlow() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springConfig = { damping: 25, stiffness: 150 };
+  const smoothX = useSpring(mouseX, springConfig);
+  const smoothY = useSpring(mouseY, springConfig);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+  }, [mouseX, mouseY]);
+
+  const background = useMotionTemplate`radial-gradient(600px circle at ${smoothX}px ${smoothY}px, rgba(129, 140, 248, 0.08), transparent 40%)`;
 
   return (
-    <div 
+    <motion.div 
       style={{
         position: 'fixed',
         top: 0,
@@ -23,7 +32,7 @@ export default function MouseGlow() {
         height: '100vh',
         pointerEvents: 'none',
         zIndex: 9999,
-        background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(129, 140, 248, 0.06), transparent 40%)`
+        background: background
       }}
     />
   );

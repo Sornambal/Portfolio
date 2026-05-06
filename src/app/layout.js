@@ -1,10 +1,10 @@
-import { Manrope, Sora } from "next/font/google";
+import { Outfit, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import MouseGlow from "@/components/MouseGlow";
 
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-body" });
-const sora = Sora({ subsets: ["latin"], variable: "--font-display" });
+
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-body", weight: ["300", "400", "500", "600", "700"] });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display", weight: ["400", "500", "600", "700"] });
 
 export const metadata = {
   title: "Sornambal P | AI & Machine Learning Engineer",
@@ -14,9 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${sora.variable}`}>
-        <MouseGlow />
+      <body className={`${outfit.variable} ${spaceGrotesk.variable}`}>
+        {/* Removed MouseGlow for a cleaner, more professional look */}
         <Navbar />
+        {/* Removed floating N button, Turbopack debug, and any Next.js branding */}
         {children}
       </body>
     </html>

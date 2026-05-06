@@ -1,3 +1,6 @@
+"use client";
+import { motion } from 'framer-motion';
+
 export default function Skills() {
   const skillCategories = [
     {
@@ -51,12 +54,23 @@ export default function Skills() {
 
   return (
     <section id="skills" className="container" style={{ paddingTop: '6rem' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        style={{ textAlign: 'center', marginBottom: '1rem' }}
+      >
         <span className="text-gradient">Technical Arsenal</span>
-      </h2>
-      <p style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '600px', margin: '0 auto 4rem auto' }}>
+      </motion.h2>
+      <motion.p 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ delay: 0.2 }}
+        style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '600px', margin: '0 auto 4rem auto' }}
+      >
         A comprehensive overview of my technical proficiencies and specialized tools across the AI and software development spectrum.
-      </p>
+      </motion.p>
       
       <div style={{
         display: 'grid',
@@ -65,19 +79,32 @@ export default function Skills() {
         marginBottom: '4rem'
       }}>
         {skillCategories.map((category, idx) => (
-          <div key={idx} className="glass-card" style={{ padding: '2rem' }}>
+          <motion.div 
+            key={idx} 
+            className="glass-card" 
+            style={{ padding: '2rem' }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ delay: idx * 0.1, duration: 0.5 }}
+            whileHover={{ y: -8, scale: 1.02 }}
+          >
             <h3 style={{ margin: '0 0 1.5rem 0', fontSize: '1.25rem', color: '#f8fafc' }}>
               {category.title}
             </h3>
             
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
               {category.skills.map((skill, sIdx) => (
-                <span key={sIdx} className="skill-badge">
+                <motion.span 
+                  key={sIdx} 
+                  className="skill-badge"
+                  whileHover={{ scale: 1.1, backgroundColor: 'rgba(129, 140, 248, 0.2)' }}
+                >
                   {skill}
-                </span>
+                </motion.span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

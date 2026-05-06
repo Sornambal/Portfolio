@@ -1,3 +1,4 @@
+  <h2 className="section-title" style={{ fontWeight: 700, fontSize: '2rem', marginBottom: '1.5rem', color: '#fff', letterSpacing: '0.01em' }}>Professional Experience</h2>
 
 export default function Experience() {
   const experiences = [

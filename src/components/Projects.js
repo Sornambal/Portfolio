@@ -1,3 +1,5 @@
+"use client";
+import { motion } from 'framer-motion';
 
 export default function Projects() {
   const projects = [
@@ -63,14 +65,6 @@ export default function Projects() {
       github: "https://github.com/Sornambal/Spaceship-Titanic-Kaggle-Competition",
       demo: "https://www.kaggle.com/competitions/spaceship-titanic"
     },
-    /* {
-      title: "Predicting Loan Payback (Kaggle)",
-      description: "Binary classification modeling predicting loan playback probability using a carefully tuned LightGBM model.",
-      tech: ["Python", "LightGBM", "Scikit-Learn", "Pandas"],
-      impact: "High stability generalization handling class imbalance with multi-seed training.",
-      github: "https://github.com/Sornambal/Predicting-Loan-Payback-Kaggle-Playground-Series-S5E11",
-      demo: "https://www.kaggle.com/competitions/playground-series-s5e11"
-    }, */
     {
       title: "AI Notes Chatbot (RAG)",
       image: "/projects/proj_chatbot.png",
@@ -83,61 +77,47 @@ export default function Projects() {
       github: "https://github.com/Sornambal/FLAN-T5-Based-AI-Chatbot-with-RAG",
       demo: "https://huggingface.co/spaces/Sornambal/AI_CHATBOT"
     }
-    /*,
-    {
-      title: "Smart Job Finder",
-      description: "Flask-based web application that helps users find current job openings using the Adzuna Job Search API.",
-      tech: ["Python", "Flask", "HTML5/CSS3", "Adzuna API"],
-      impact: "Secure API key handling and live data fetching for real-time job availability.",
-      github: "https://github.com/Sornambal/Smart-Job-Finder-Flask-Web-App-using-Adzuna-API",
-      demo: "#"
-    },
-    {
-      title: "Smart Crop Recommendation System",
-      description: "Streamlit web application that intelligently predicts suitable crops based on environmental variables.",
-      tech: ["Python", "Scikit-Learn", "Streamlit", "NumPy"],
-      impact: "Real-time crop recommendation using trained machine learning models.",
-      github: "https://github.com/Sornambal/crop-prediction-streamlit",
-      demo: "#"
-    },
-    {
-      title: "Sentiment Analysis of Book Review",
-      description: "NLP classification on book reviews using a Naive Bayes classifier and TF-IDF vectorization.",
-      tech: ["Python", "NLTK", "Scikit-Learn", "Imblearn"],
-      impact: "Effective handling of imbalanced classes via oversampling.",
-      github: "https://github.com/Sornambal/Sentiment-analysis-of-book-review",
-      demo: "#"
-    },
-    {
-      title: "Beverage Sales Dashboard",
-      description: "Interactive Power BI dashboard to analyze beverage sales and profitability using structured datasets.",
-      tech: ["Power BI", "Data Visualization", "Data Integration"],
-      impact: "Provides actionable, real-time insights for business decision-making.",
-      github: "https://github.com/Sornambal/Beverage-Sales-Profitability-Dashboard",
-      demo: "#"
-    }
-    */
   ];
 
   return (
     <section id="projects" className="container">
-      <h2 style={{ textAlign: 'center' }}>
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        style={{ textAlign: 'center' }}
+      >
         <span className="text-gradient">Featured Projects</span>
-      </h2>
-      <p style={{ textAlign: 'center', marginBottom: '3rem', maxWidth: '600px', marginInline: 'auto' }}>
+      </motion.h2>
+      <motion.p 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ delay: 0.2 }}
+        style={{ textAlign: 'center', marginBottom: '3rem', maxWidth: '600px', marginInline: 'auto' }}
+      >
         A selection of my best work focused on Generative AI, machine learning pipelines, and full-stack intelligent systems.
-      </p>
+      </motion.p>
       
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem' }}>
         {projects.map((project, idx) => (
-          <div key={idx} className={`glass-card ${project.highlight ? 'highlight-card' : ''}`} style={{ 
-            display: 'flex', 
-            flexDirection: 'column', 
-            position: 'relative',
-            overflow: 'hidden',
-            padding: 0,
-            boxShadow: project.highlight ? '0 0 30px rgba(56, 189, 248, 0.1)' : undefined
-          }}>
+          <motion.div 
+            key={idx} 
+            className={`glass-card ${project.highlight ? 'highlight-card' : ''}`} 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ delay: idx * 0.1, duration: 0.5 }}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+            style={{ 
+              display: 'flex', 
+              flexDirection: 'column', 
+              position: 'relative',
+              overflow: 'hidden',
+              padding: 0,
+              boxShadow: project.highlight ? '0 0 30px rgba(56, 189, 248, 0.15)' : undefined
+            }}
+          >
             {project.highlight && (
               <div style={{
                 position: 'absolute',
@@ -190,20 +170,20 @@ export default function Projects() {
                 ))}
               </div>
               
-              <div style={{ display: 'flex', gap: '1rem', marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid var(--border)' }}>
+              <div style={{ display: 'flex', gap: '1rem', marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
                 {project.github !== '#' && (
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: '#a3a3a3' }}>
+                  <motion.a whileHover={{ scale: 1.05 }} href={project.github} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: '#a3a3a3' }}>
                     <img src="https://cdn.simpleicons.org/github/a3a3a3" alt="GitHub" style={{ width: '18px', height: '18px' }} /> Code
-                  </a>
+                  </motion.a>
                 )}
                 {project.demo !== '#' && (
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: '#a3a3a3' }}>
+                  <motion.a whileHover={{ scale: 1.05 }} href={project.demo} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: '#a3a3a3' }}>
                      Live Demo
-                  </a>
+                  </motion.a>
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
