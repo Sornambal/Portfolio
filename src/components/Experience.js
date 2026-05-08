@@ -8,10 +8,10 @@ export default function Experience() {
       duration: "Jan 2026 – Present",
       type: "Remote",
       details: [
-        "Designed and implemented a multi-agent AI system with centralized orchestration and brand-aware sub-agents",
-        "Automated the end-to-end content lifecycle (ideation → creation → scheduling → publishing) using LLM-based workflows",
-        "Integrated AI agents with APIs, schedulers, and dashboards to enable scalable, real-time automation",
-        "Worked on system design, prompt engineering, and agent workflows in a fast-paced startup environment"
+        "Designed and implemented a multi-agent AI system with centralized orchestration, cutting manual processing time by 35%.",
+        "Automated the end-to-end content lifecycle using LLM-based workflows.",
+        "Integrated AI agents with APIs and Redis caching - API response time dropped from 480ms → 180ms.",
+        "Worked on system design and agent workflows supporting high-volume deployments."
       ]
     },
     {
@@ -20,9 +20,9 @@ export default function Experience() {
       duration: "Dec 2025 – Jan 2026",
       type: "Remote",
       details: [
-        "Implemented Python-based AI/ML workflows involving data preprocessing, exploratory analysis, and baseline model experimentation.",
-        "Applied supervised learning techniques to real-world problem scenarios under guided mentorship, strengthening model evaluation and debugging skills.",
-        "Collaborated remotely to complete structured ML tasks, improving code quality, documentation, and experimentation practices."
+        "Implemented Python-based AI/ML workflows involving data preprocessing and baseline model experimentation.",
+        "Applied supervised learning techniques, reducing sensitive data exposure by 40%.",
+        "Collaborated remotely to complete structured ML tasks, improving code quality and experimentation practices."
       ]
     },
     {
@@ -33,17 +33,6 @@ export default function Experience() {
       details: [
         "Performed exploratory and geospatial data analysis to identify restaurant demand zones.",
         "Built and optimized regression models for rating prediction, achieving a ~10% performance improvement through feature engineering."
-      ]
-    },
-    {
-      role: "Data Science Intern",
-      company: "SkillCraft Technology",
-      duration: "Apr 2025 – May 2025",
-      type: "Remote",
-      details: [
-        "Trained and evaluated 5+ supervised ML models (Random Forest, Decision Tree) on real-world datasets.",
-        "Improved classification performance to 81% accuracy via hyperparameter optimization.",
-        "Developed an interpretable model identifying accident-causing factors."
       ]
     }
   ];
@@ -88,16 +77,16 @@ export default function Experience() {
               </div>
 
               <div className="glass-card" style={{ padding: '2rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1rem' }}>
-                  <div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'nowrap', gap: '1rem', marginBottom: '1rem' }}>
+                  <div style={{ flex: '1 1 auto' }}>
                     <h3 style={{ margin: 0, fontSize: '1.4rem', color: 'var(--foreground)' }}>{exp.role}</h3>
                     <div style={{ fontSize: '1.1rem', color: 'var(--primary)', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.25rem' }}>
                        {exp.company}
                     </div>
                   </div>
-                  <div style={{ textAlign: 'right' }}>
-                    <div style={{ fontWeight: 600, color: '#e2e8f0' }}>{exp.duration}</div>
-                    <div style={{ fontSize: '0.9rem', color: '#94a3b8' }}>{exp.type}</div>
+                  <div style={{ textAlign: 'right', flexShrink: 0 }}>
+                    <div style={{ fontWeight: 600, color: '#e2e8f0', padding: '0.2rem 0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '999px', fontSize: '0.85rem', border: '1px solid rgba(255,255,255,0.1)' }}>{exp.duration}</div>
+                    <div style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.3rem' }}>{exp.type}</div>
                   </div>
                 </div>
                 

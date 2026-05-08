@@ -48,7 +48,14 @@ export default function Navbar() {
         maxWidth: '90vw'
       }}>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem' }}>
-        {/* Logo removed for minimal header */}
+        <a href="#hero" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
+          <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #818cf8, #c084fc)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 800, fontSize: '1.1rem', boxShadow: '0 0 15px rgba(129, 140, 248, 0.4)' }}>
+            S
+          </div>
+          <span style={{ fontWeight: 800, fontSize: '1.2rem', color: '#f8fafc', letterSpacing: '-0.02em', textTransform: 'capitalize', whiteSpace: 'nowrap' }}>
+            Sornambal P
+          </span>
+        </a>
         {/* Desktop Nav */}
         <div style={{ display: 'none' }} className="desktop-nav">
           <ul style={{ display: 'flex', gap: '2.5rem', listStyle: 'none', margin: 0, padding: 0 }}>

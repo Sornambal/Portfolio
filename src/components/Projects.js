@@ -4,44 +4,6 @@ import { motion } from 'framer-motion';
 export default function Projects() {
   const projects = [
     {
-      title: "Job Application Intelligence System",
-      image: "/projects/proj_job_system.png",
-      description: [
-        "Multi-agent AI system automating job tracking, email parsing, and follow-ups.",
-        "Features a real-time dashboard and integrated WhatsApp alerts."
-      ],
-      tech: ["Python", "LangGraph", "Groq LLaMA-3", "Flask", "Twilio"],
-      impact: "99% email extraction accuracy, preventing invalid transitions with a Finite State Machine.",
-      github: "https://github.com/Sornambal/Job-Application-Intelligence-System",
-      demo: "#",
-      highlight: true
-    },
-    {
-      title: "AI Meeting Intelligence Dashboard",
-      image: "/projects/proj_meeting_dash.png",
-      description: [
-        "FastAPI backend processing meeting notes using advanced LLMs.",
-        "Automatically extracts actions, concise summaries, and structured tasks."
-      ],
-      tech: ["Python", "FastAPI", "Groq LLaMA-3.1", "Pydantic"],
-      impact: "Production-ready, machine-readable JSON output for voice-first platforms.",
-      github: "https://github.com/Sornambal/AI-Meeting-Intelligence-Dashboard",
-      demo: "#",
-      highlight: true
-    },
-    {
-      title: "CareCircle - AI Elderly Care Assistant",
-      image: "/projects/proj_carecircle.png",
-      description: [
-        "Full-stack application designed for elderly care with robust medicine tracking.",
-        "Features SOS dual-alerts and comprehensive medication adherence reporting."
-      ],
-      tech: ["Node.js", "Express", "React", "MongoDB", "Socket.IO"],
-      impact: "Seamless unified account system with real-time notifications.",
-      github: "https://github.com/Sornambal/CareCircle",
-      demo: "#"
-    },
-    {
       title: "Smart News Summarizer Agent",
       image: "/projects/proj_news_agent.png",
       description: [
@@ -51,7 +13,21 @@ export default function Projects() {
       tech: ["Python", "LangChain", "Groq API", "Tavily API", "Flask"],
       impact: "Fully autonomous search & extraction without manual intervention.",
       github: "https://github.com/Sornambal/Smart-News-Summarizer-Agent",
-      demo: "https://huggingface.co/spaces/Sornambal/Smart_News_Summarizer_Agent"
+      demo: "https://huggingface.co/spaces/Sornambal/Smart_News_Summarizer_Agent",
+      highlight: true
+    },
+    {
+      title: "AI Notes Chatbot (RAG)",
+      image: "/projects/proj_chatbot.png",
+      description: [
+        "Document-based Q&A chatbot using LLM embeddings.",
+        "Utilizes FAISS for scalable, real-time document retrieval."
+      ],
+      tech: ["Transformers", "FAISS", "SentenceTransformers", "Gradio", "FLAN-T5"],
+      impact: "Supports PDF, DOCX, TXT with highly accurate semantic search.",
+      github: "https://github.com/Sornambal/FLAN-T5-Based-AI-Chatbot-with-RAG",
+      demo: "https://huggingface.co/spaces/Sornambal/AI_CHATBOT",
+      highlight: true
     },
     {
       title: "Spaceship Titanic (Kaggle)",
@@ -66,16 +42,40 @@ export default function Projects() {
       demo: "https://www.kaggle.com/competitions/spaceship-titanic"
     },
     {
-      title: "AI Notes Chatbot (RAG)",
-      image: "/projects/proj_chatbot.png",
+      title: "Job Application Intelligence System",
+      image: "/projects/proj_job_system.png",
       description: [
-        "Document-based Q&A chatbot using LLM embeddings.",
-        "Utilizes FAISS for scalable, real-time document retrieval."
+        "Multi-agent AI system automating job tracking, email parsing, and follow-ups.",
+        "Features a real-time dashboard and integrated WhatsApp alerts."
       ],
-      tech: ["Transformers", "FAISS", "SentenceTransformers", "Gradio", "FLAN-T5"],
-      impact: "Supports PDF, DOCX, TXT with highly accurate semantic search.",
-      github: "https://github.com/Sornambal/FLAN-T5-Based-AI-Chatbot-with-RAG",
-      demo: "https://huggingface.co/spaces/Sornambal/AI_CHATBOT"
+      tech: ["Python", "LangGraph", "Groq LLaMA-3", "Flask", "Twilio"],
+      impact: "99% email extraction accuracy, preventing invalid transitions with a Finite State Machine.",
+      github: "https://github.com/Sornambal/Job-Application-Intelligence-System",
+      demo: "#"
+    },
+    {
+      title: "AI Meeting Intelligence Dashboard",
+      image: "/projects/proj_meeting_dash.png",
+      description: [
+        "FastAPI backend processing meeting notes using advanced LLMs.",
+        "Automatically extracts actions, concise summaries, and structured tasks."
+      ],
+      tech: ["Python", "FastAPI", "Groq LLaMA-3.1", "Pydantic"],
+      impact: "Optimized API response from 10 ms to 3 ms, providing machine-readable JSON output.",
+      github: "https://github.com/Sornambal/AI-Meeting-Intelligence-Dashboard",
+      demo: "#"
+    },
+    {
+      title: "CareCircle - AI Elderly Care Assistant",
+      image: "/projects/proj_carecircle.png",
+      description: [
+        "Full-stack application designed for elderly care with robust medicine tracking.",
+        "Features SOS dual-alerts and comprehensive medication adherence reporting."
+      ],
+      tech: ["Node.js", "Express", "React", "MongoDB", "Socket.IO"],
+      impact: "Seamless unified account system with real-time notifications.",
+      github: "https://github.com/Sornambal/CareCircle",
+      demo: "#"
     }
   ];
 
@@ -118,23 +118,7 @@ export default function Projects() {
               boxShadow: project.highlight ? '0 0 30px rgba(56, 189, 248, 0.15)' : undefined
             }}
           >
-            {project.highlight && (
-              <div style={{
-                position: 'absolute',
-                top: '1rem',
-                right: '-2rem',
-                background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
-                color: 'white',
-                padding: '0.25rem 2.5rem',
-                transform: 'rotate(45deg)',
-                fontSize: '0.75rem',
-                fontWeight: 'bold',
-                boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
-                zIndex: 10
-              }}>
-                PRODUCTION GRADE
-              </div>
-            )}
+
 
             {/* Project Image Wrapper */}
             <div className="project-img-wrapper" style={{ position: 'relative', width: '100%', height: '220px', overflow: 'hidden' }}>

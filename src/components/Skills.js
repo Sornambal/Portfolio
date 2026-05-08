@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export default function Skills() {
   const skillCategories = [
     {
-      title: "🧠 AI / Machine Learning",
+      title: <><i className="fas fa-brain" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> AI / Machine Learning</>,
       skills: [
         "Machine Learning", "Deep Learning", "NLP",
         "Feature Engineering", "Model Evaluation", "Classification", "Regression",
@@ -12,7 +12,7 @@ export default function Skills() {
       ]
     },
     {
-      title: "🤖 Generative AI & Agentic Systems",
+      title: <><i className="fas fa-robot" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> Generative AI & Agentic Systems</>,
       skills: [
         "LLM Applications (Groq, FLAN-T5)", "Retrieval-Augmented Generation (RAG)",
         "LangGraph", "Multi-Agent Orchestration", "Prompt Engineering", 
@@ -20,7 +20,7 @@ export default function Skills() {
       ]
     },
     {
-      title: "🌐 Backend & APIs",
+      title: <><i className="fas fa-server" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> Backend & APIs</>,
       skills: [
         "Python", "Flask", "FastAPI",
         "REST APIs", "API Integration",
@@ -28,7 +28,7 @@ export default function Skills() {
       ]
     },
     {
-      title: "💻 Frontend & Full Stack",
+      title: <><i className="fas fa-laptop-code" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> Frontend & Full Stack</>,
       skills: [
         "React.js", "Next.js",
         "HTML", "CSS", "JavaScript",
@@ -36,14 +36,14 @@ export default function Skills() {
       ]
     },
     {
-      title: "🗄️ Databases & Vector Stores",
+      title: <><i className="fas fa-database" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> Databases & Vector Stores</>,
       skills: [
         "MongoDB", "MySQL",
         "FAISS (Vector Search)"
       ]
     },
     {
-      title: "☁️ Deployment & Tools",
+      title: <><i className="fas fa-cloud" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> Deployment & Tools</>,
       skills: [
         "Hugging Face Spaces", "Render", "Netlify",
         "Git", "GitHub", "Jupyter Notebook",
