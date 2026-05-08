@@ -1,10 +1,19 @@
 "use client";
+
 import { motion } from 'framer-motion';
+import {
+  BrainCircuit,
+  Bot,
+  Server,
+  Laptop2,
+  Database,
+  Cloud,
+} from 'lucide-react';
 
 export default function Skills() {
   const skillCategories = [
     {
-      title: <><i className="fas fa-brain" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> AI / Machine Learning</>,
+      title: <><BrainCircuit color="var(--primary)" size={22} style={{ marginRight: 8, verticalAlign: 'middle' }} /> AI / Machine Learning</>,
       skills: [
         "Machine Learning", "Deep Learning", "NLP",
         "Feature Engineering", "Model Evaluation", "Classification", "Regression",
@@ -12,7 +21,7 @@ export default function Skills() {
       ]
     },
     {
-      title: <><i className="fas fa-robot" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> Generative AI & Agentic Systems</>,
+      title: <><Bot color="var(--primary)" size={22} style={{ marginRight: 8, verticalAlign: 'middle' }} /> Generative AI & Agentic Systems</>,
       skills: [
         "LLM Applications (Groq, FLAN-T5)", "Retrieval-Augmented Generation (RAG)",
         "LangGraph", "Multi-Agent Orchestration", "Prompt Engineering", 
@@ -20,7 +29,7 @@ export default function Skills() {
       ]
     },
     {
-      title: <><i className="fas fa-server" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> Backend & APIs</>,
+      title: <><Server color="var(--primary)" size={22} style={{ marginRight: 8, verticalAlign: 'middle' }} /> Backend & APIs</>,
       skills: [
         "Python", "Flask", "FastAPI",
         "REST APIs", "API Integration",
@@ -28,7 +37,7 @@ export default function Skills() {
       ]
     },
     {
-      title: <><i className="fas fa-laptop-code" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> Frontend & Full Stack</>,
+      title: <><Laptop2 color="var(--primary)" size={22} style={{ marginRight: 8, verticalAlign: 'middle' }} /> Frontend & Full Stack</>,
       skills: [
         "React.js", "Next.js",
         "HTML", "CSS", "JavaScript",
@@ -36,14 +45,14 @@ export default function Skills() {
       ]
     },
     {
-      title: <><i className="fas fa-database" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> Databases & Vector Stores</>,
+      title: <><Database color="var(--primary)" size={22} style={{ marginRight: 8, verticalAlign: 'middle' }} /> Databases & Vector Stores</>,
       skills: [
         "MongoDB", "MySQL",
         "FAISS (Vector Search)"
       ]
     },
     {
-      title: <><i className="fas fa-cloud" style={{ color: 'var(--primary)', marginRight: '8px' }}></i> Deployment & Tools</>,
+      title: <><Cloud color="var(--primary)" size={22} style={{ marginRight: 8, verticalAlign: 'middle' }} /> Deployment & Tools</>,
       skills: [
         "Hugging Face Spaces", "Render", "Netlify",
         "Git", "GitHub", "Jupyter Notebook",
