@@ -1,40 +1,42 @@
+import { Rocket, BarChart2, GraduationCap, Trophy, Lightbulb, Medal } from 'lucide-react';
+
 export default function Achievements() {
   const achievements = [
     {
-      title: <><i className="fas fa-rocket"></i> Top ~3% Global Rank</>,
+      title: <>Top ~3% Global Rank</>,
       subtitle: "Kaggle Spaceship Titanic Competition",
       desc: "Ranked 72 out of 2,584 participants globally using CatBoost and advanced feature engineering.",
-      icon: <i className="fas fa-rocket" style={{ color: 'var(--primary)' }}></i>
+      icon: <Rocket color="var(--primary)" size={40} />
     },
     {
-      title: <><i className="fas fa-chart-bar"></i> High Performance in Kaggle</>,
+      title: <>High Performance in Kaggle</>,
       subtitle: "Predicting Loan Payback",
       desc: "Achieved 0.92299 ROC-AUC in Kaggle Playground Series.",
-      icon: <i className="fas fa-chart-bar" style={{ color: 'var(--primary)' }}></i>
+      icon: <BarChart2 color="var(--primary)" size={40} />
     },
     {
-      title: <><i className="fas fa-graduation-cap"></i> Academic Topper (2x)</>,
+      title: <>Academic Topper (2x)</>,
       subtitle: "B.Tech Information Technology",
       desc: "Achieved a CGPA of 9.29 / 10 at KGISL Institute of Technology.",
-      icon: <i className="fas fa-graduation-cap" style={{ color: 'var(--primary)' }}></i>
+      icon: <GraduationCap color="var(--primary)" size={40} />
     },
     {
-      title: <><i className="fas fa-trophy"></i> KITE Achiever Award (2x)</>,
+      title: <>KITE Achiever Award (2x)</>,
       subtitle: "KGiSL Institute of Technology",
       desc: "Recognized for outstanding contribution to the Pointer Camp and C Mini Projects.",
-      icon: <i className="fas fa-trophy" style={{ color: 'var(--primary)' }}></i>
+      icon: <Trophy color="var(--primary)" size={40} />
     },
     {
-      title: <><i className="fas fa-lightbulb"></i> Hackathon Successes</>,
+      title: <>Hackathon Successes</>,
       subtitle: "Multiple National Hackathons",
       desc: "Selected 2x for SIH Internal Hackathon, participated in Trixathon 2K25.",
-      icon: <i className="fas fa-lightbulb" style={{ color: 'var(--primary)' }}></i>
+      icon: <Lightbulb color="var(--primary)" size={40} />
     },
     {
-      title: <><i className="fas fa-medal"></i> CIT Hackathon 2025</>,
+      title: <>CIT Hackathon 2025</>,
       subtitle: "Bronze Medal",
       desc: "Top 24 out of 220+ teams for 'MedCycle', an AI-powered medicine redistribution app.",
-      icon: <i className="fas fa-medal" style={{ color: 'var(--primary)' }}></i>
+      icon: <Medal color="var(--primary)" size={40} />
     }
   ];
 

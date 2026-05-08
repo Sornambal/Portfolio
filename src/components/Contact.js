@@ -1,4 +1,9 @@
+
 "use client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedinIn, faGithub, faKaggle, faHackerrank } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
   return (
@@ -32,9 +37,31 @@ export default function Contact() {
         </div>
 
         {/* Email Box */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(0.5rem, 3vw, 1.5rem)', padding: 'clamp(0.8rem, 3vw, 1.25rem) clamp(1rem, 4vw, 2.5rem)', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(3, 200, 249, 0.2)', borderRadius: '12px', marginBottom: '3rem', cursor: 'pointer', transition: 'background 0.2s', width: '100%', maxWidth: '400px', justifyContent: 'center' }} onMouseOver={e => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'} onMouseOut={e => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'} onClick={() => window.location.href='mailto:sornambalp97@gmail.com'}>
+        <div
+          className="email-box"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 'clamp(0.5rem, 3vw, 1.5rem)',
+            padding: 'clamp(0.8rem, 3vw, 1.25rem) clamp(1rem, 4vw, 2.5rem)',
+            background: 'rgba(255, 255, 255, 0.03)',
+            border: '1px solid rgba(3, 200, 249, 0.2)',
+            borderRadius: '12px',
+            marginBottom: '3rem',
+            cursor: 'pointer',
+            transition: 'background 0.2s',
+            width: '100%',
+            maxWidth: '400px',
+            justifyContent: 'center',
+            overflowWrap: 'break-word',
+            wordBreak: 'break-all',
+          }}
+          onMouseOver={e => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'}
+          onMouseOut={e => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'}
+          onClick={() => window.location.href='mailto:sornambalp97@gmail.com'}
+        >
           <div style={{ padding: 'clamp(0.4rem, 2vw, 0.5rem)', background: 'rgba(3, 200, 249, 0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <i className="far fa-envelope" style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)', color: '#38bdf8' }}></i>
+            <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)', color: '#38bdf8' }} />
           </div>
           <span style={{ fontFamily: 'monospace', fontSize: 'clamp(0.85rem, 4vw, 1.1rem)', color: '#e2e8f0', letterSpacing: '0.02em', overflowWrap: 'break-word', wordBreak: 'break-all' }}>
             sornambalp97@gmail.com
@@ -49,19 +76,19 @@ export default function Contact() {
         {/* Social Buttons */}
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
           <a href="https://www.linkedin.com/in/sornambal-p-b789132b8/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.6rem 1.25rem', background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '8px', color: '#cbd5e1', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', transition: 'all 0.2s' }} onMouseOver={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; e.currentTarget.style.color = '#fff'; }} onMouseOut={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'; e.currentTarget.style.color = '#cbd5e1'; }}>
-            <i className="fab fa-linkedin-in" style={{ fontSize: '1rem' }}></i> LINKEDIN
+            <FontAwesomeIcon icon={faLinkedinIn} style={{ fontSize: '1rem' }} /> LINKEDIN
           </a>
           <a href="https://github.com/Sornambal" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.6rem 1.25rem', background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '8px', color: '#cbd5e1', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', transition: 'all 0.2s' }} onMouseOver={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; e.currentTarget.style.color = '#fff'; }} onMouseOut={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'; e.currentTarget.style.color = '#cbd5e1'; }}>
-            <i className="fab fa-github" style={{ fontSize: '1rem' }}></i> GITHUB
+            <FontAwesomeIcon icon={faGithub} style={{ fontSize: '1rem' }} /> GITHUB
           </a>
           <a href="https://leetcode.com/u/Sornambal/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.6rem 1.25rem', background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '8px', color: '#cbd5e1', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', transition: 'all 0.2s' }} onMouseOver={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; e.currentTarget.style.color = '#fff'; }} onMouseOut={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'; e.currentTarget.style.color = '#cbd5e1'; }}>
-            <i className="fas fa-code" style={{ fontSize: '1rem' }}></i> LEETCODE
+            <FontAwesomeIcon icon={faCode} style={{ fontSize: '1rem' }} /> LEETCODE
           </a>
           <a href="https://www.kaggle.com/sornambalp" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.6rem 1.25rem', background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '8px', color: '#cbd5e1', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', transition: 'all 0.2s' }} onMouseOver={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; e.currentTarget.style.color = '#fff'; }} onMouseOut={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'; e.currentTarget.style.color = '#cbd5e1'; }}>
-            <i className="fab fa-kaggle" style={{ fontSize: '1rem' }}></i> KAGGLE
+            <FontAwesomeIcon icon={faKaggle} style={{ fontSize: '1rem' }} /> KAGGLE
           </a>
           <a href="https://www.hackerrank.com/profile/sornambalp97" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.6rem 1.25rem', background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '8px', color: '#cbd5e1', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', transition: 'all 0.2s' }} onMouseOver={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; e.currentTarget.style.color = '#fff'; }} onMouseOut={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'; e.currentTarget.style.color = '#cbd5e1'; }}>
-            <i className="fab fa-hackerrank" style={{ fontSize: '1rem' }}></i> HACKERRANK
+            <FontAwesomeIcon icon={faHackerrank} style={{ fontSize: '1rem' }} /> HACKERRANK
           </a>
         </div>
       </div>

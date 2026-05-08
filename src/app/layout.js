@@ -1,7 +1,8 @@
 import { Outfit, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import "./responsive-fixes.css";
 import Navbar from "@/components/Navbar";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import ClientThemeProvider from "@/components/ClientThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-body", weight: ["300", "400", "500", "600", "700"] });
@@ -37,15 +38,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-      </head>
+      <head></head>
       <body className={`${outfit.variable} ${spaceGrotesk.variable}`}>
-        <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem={false}>
+        <ClientThemeProvider>
           <Navbar />
           {children}
           <Analytics />
-        </ThemeProvider>
+        </ClientThemeProvider>
       </body>
     </html>
   );
